@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: pink;
+}
+
+/*header CSS starts*/
+.welcome {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/cecy6.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+.welcome h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.welcome h1 span {
+    color: pink;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    border: 1px solid red;
+    width: 400px;
+
+
+}
+
+.slider img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background-color: pink;
+}
+
+.blessings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 20px 0;
+    width: 100vw;
+}
+
+.blessings p {
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    font-size: 1.6rem;
+    color: #A1045A;
+    line-height: 1.5;
+    display: flex;
+    max-width: 600px;
+
+}
+.call-to-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.call-to-action p{
+    font-size: 2rem;
+    color: #4C0121;
+}
+.surprise-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.surprise-button button {
+    background-color: white;
+    color: #A1045A;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    padding: .5rem 2rem;
+    border: .2rem solid #4C0121;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    margin-top: 4px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.surprise-button button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #A1045A;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.surprise-button button:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.surprise-button button:hover {
+    color: white;
+}
+footer {
+    
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+        margin-top: 20px;
+
+      
+}
+@media screen and (max-width: 630px){
+    .blessings p{
+        font-size: 1.4rem;
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 568px){
+    .blessings p{
+        font-size: 1.3rem;
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 478px){
+    .blessings p{
+        font-size: 1.2rem;
+        max-width: 300px;
+    }
+}
+
+
